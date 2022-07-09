@@ -1,0 +1,12 @@
+HISTFILE=~/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=10000
+
+eval "$(starship init zsh)"
+source <(curl -sL https://git.io/zi-loader); zzinit
+
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-syntax-highlighting
+
+[[ -f $HOME/.zsh/.fzf.zsh ]] && source $HOME/.zsh/.fzf.zsh
